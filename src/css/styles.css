@@ -18,11 +18,11 @@ body {
 }
 
 #output {
-    background-color: var(--back);
-    overflow-y:scroll;
-    height: 96vh;
+    background-color: var(--black);
+    overflow-y: auto;
+    height: 75vh;
     margin: 0 auto;
-    padding: 2px;
+    padding: 0;
 }
 
 #output p {
@@ -49,11 +49,8 @@ body {
 }
 
 .container {
-    margin-top: 100px;
-    margin-left: 100px;
-    width: 50%;
-    height: 500px;
-    position: relative;
+    margin: 0;
+    width: 65%;
 }
 
 .flash>.editing::after {
