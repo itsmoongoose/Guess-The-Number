@@ -49,10 +49,11 @@ body {
 }
 
 .container {
-    margin: 0 auto;
-    width: 80%;
+    margin-top: 100px;
+    margin-left: 100px;
+    width: 50%;
+    height: 500px;
     position: relative;
-    border: 3px solid var(--black);
 }
 
 .flash>.editing::after {
