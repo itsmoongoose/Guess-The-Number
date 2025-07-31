@@ -16,6 +16,8 @@ body {
     --meta: #32a3ff;
     --debug: #FF0;
     background-color: #CCC;
+    margin: 0;
+    padding: 0;
 }
 
 #output {
@@ -55,7 +57,7 @@ body {
     margin: 0;
     width: 830px;
     height: 750px;
-    transform: translate(47.5%, -11%);
+    transform: translate(67%, -116%);
 }
 
 .flash>.editing::after {
@@ -63,13 +65,11 @@ body {
  font-weight: bolder;
 }
 
-.screen {
-    width: 1920px;
+.screenSize {
+    width: 1905px;
     height: 1080px;
-    background-image: url('img/arcade-blank-1080.png');
-    background-size: 100%;
+    background-image: url('../img/arcade-blank-1080.png');
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    margin: 0;
-    padding: 0;
 }

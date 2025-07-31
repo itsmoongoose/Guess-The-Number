@@ -7,23 +7,15 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/styles.css">
-        <style>
-            body {
-                background-image: url('img/arcade-blank-1080.png');
-                background-size: 100%;
-                background-repeat: no-repeat;
-                background-position: center;
-                margin: 160px;
-                padding: 0;
-            }
-        </style>
     </head>
     <body>
-        <img src="img/arcade-logo.png" alt="Guess The Number" width="500" height="350" style="padding: 300px 550px">
-        <div class="container">
-            <div id="output">
+        <div class="screenSize">
+            <img src="img/arcade-logo.png" alt="Guess The Number" width="500" height="350" style="padding: 300px 550px">
+            <div class="container">
+                <div id="output">
+                </div>
+                <input id="input" type="text">
             </div>
-            <input id="input" type="text">
         </div>
         <script src="js/scripts.js" defer></script>
         <script src="js/console.js" defer></script>
