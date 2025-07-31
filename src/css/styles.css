@@ -21,7 +21,7 @@ body {
 #output {
     background-color: var(--black);
     overflow-y: auto;
-    height: 75vh;
+    height: 67vh;
     margin: 0;
     padding: 0;
 }
