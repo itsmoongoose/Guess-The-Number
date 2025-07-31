@@ -3,6 +3,7 @@ html {
     
     --white: #EEE;
     --black: #111;
+    --purple: #0a031a;
     --error: #F00;
     --meta: #0FF;
     --debug: #FF0;
@@ -18,10 +19,10 @@ body {
 }
 
 #output {
-    background-color: var(--black);
+    background-color: var(--purple);
     overflow-y: auto;
     height: 75vh;
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
 }
 
@@ -50,7 +51,7 @@ body {
 
 .container {
     margin: 0;
-    width: 65%;
+    width: 100%;
 }
 
 .flash>.editing::after {
