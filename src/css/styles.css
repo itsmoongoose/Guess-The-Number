@@ -59,12 +59,3 @@ body {
  content: "|";
  font-weight: bolder;
 }
-
-.arcadeCabinet {
-    background-image: url('img/Arcade-No-Title.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin: 0;
-    padding: 0;
-}
