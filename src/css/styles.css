@@ -28,6 +28,8 @@ body {
     padding: 0;
     border: 5px solid var(--purple);
     border-radius: 12px;
+    position: relative;
+    z-index: 1;
 }
 
 #output p {
@@ -72,4 +74,9 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.arcade-logo {
+    position: absolute;
+    z-index: 2;
 }
