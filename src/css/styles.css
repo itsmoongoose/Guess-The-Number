@@ -19,7 +19,7 @@ body {
 }
 
 #output {
-    background-color: var(--purple);
+    background-color: var(--black);
     overflow-y: auto;
     height: 75vh;
     margin: 0;
@@ -51,7 +51,9 @@ body {
 
 .container {
     margin: 0;
-    width: 100%;
+    width: 840px;
+    height: 750px;
+    transform: translate(53.5%, -7%);
 }
 
 .flash>.editing::after {
