@@ -19,11 +19,13 @@ body {
 }
 
 #output {
-    background-color: var(--black);
+    background-color: var(--purple);
     overflow-y: auto;
-    height: 67vh;
+    height: 64vh;
     margin: 0;
     padding: 0;
+    border: 5px solid var(--purple);
+    border-radius: 12px;
 }
 
 #output p {
@@ -51,9 +53,9 @@ body {
 
 .container {
     margin: 0;
-    width: 840px;
+    width: 830px;
     height: 750px;
-    transform: translate(53.5%, -7%);
+    transform: translate(47.5%, -11%);
 }
 
 .flash>.editing::after {
