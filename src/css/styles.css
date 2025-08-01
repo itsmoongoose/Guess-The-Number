@@ -99,6 +99,20 @@ body {
     z-index: 5;
 }
 
+.playbtn:hover {
+    background-image: url('../img/play-button-hover.png');
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-size: contain;
+    background-position: center;
+    border: none;
+    width: 450px;
+    height: 100px;
+    margin-left: 515px;
+    margin-top: 450px;
+    z-index: 6;
+}
+
 .leaderboardbtn {
     background-image: url('../img/leaderboard-button.png');
     background-repeat: no-repeat;
@@ -109,4 +123,18 @@ body {
     width: 450px;
     height: 100px;
     z-index: 5;
+}
+
+.leaderboardbtn:hover {
+    background-image: url('../img/leaderboard-button-hover.png');
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-size: contain;
+    background-position: center;
+    border: none;
+    width: 450px;
+    height: 100px;
+    margin-left: 515px;
+    margin-top: 450px;
+    z-index: 6;
 }
