@@ -1,4 +1,15 @@
+//Function -- main
+async function main() {
 
+    //Get Element -- play and leaderboard buttons
+    const playbtn = document.getElementById('playbtn');
+    const leaderboardbtn = document.getElementById('leaderboardbtn');
+
+
+
+
+
+}
 
 
 
