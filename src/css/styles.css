@@ -95,7 +95,7 @@ body {
 
 .leaderboardbtn {
     background-image: url('../img/leaderboard-button.png');
-        background-repeat: no-repeat;
+    background-repeat: no-repeat;
     background-color: transparent;
     width: 150px;
     height: 75px;
