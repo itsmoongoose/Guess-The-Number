@@ -88,9 +88,11 @@ body {
 .playbtn {
     background-image: url('../img/play-button.png');
     background-repeat: no-repeat;
+    background-color: white;
     border: none;
     width: 150px;
     height: 75px;
+    z-index: 5;
 }
 
 .leaderboardbtn {
