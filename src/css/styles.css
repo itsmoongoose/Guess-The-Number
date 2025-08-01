@@ -88,17 +88,25 @@ body {
 .playbtn {
     background-image: url('../img/play-button.png');
     background-repeat: no-repeat;
-    background-color: white;
+    background-color: transparent;
+    background-size: contain;
+    background-position: center;
     border: none;
-    width: 150px;
-    height: 75px;
+    width: 450px;
+    height: 100px;
+    margin-left: 515px;
+    margin-top: 450px;
     z-index: 5;
 }
 
 .leaderboardbtn {
     background-image: url('../img/leaderboard-button.png');
     background-repeat: no-repeat;
+    background-color: transparent;
+    background-size: contain;
+    background-position: center;
     border: none;
-    width: 150px;
-    height: 75px;
+    width: 450px;
+    height: 100px;
+    z-index: 5;
 }
