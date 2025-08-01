@@ -88,7 +88,7 @@ body {
 .playbtn {
     background-image: url('../img/play-button.png');
     background-repeat: no-repeat;
-    background-color: transparent;
+    border: none;
     width: 150px;
     height: 75px;
 }
@@ -96,7 +96,7 @@ body {
 .leaderboardbtn {
     background-image: url('../img/leaderboard-button.png');
     background-repeat: no-repeat;
-    background-color: transparent;
+    border: none;
     width: 150px;
     height: 75px;
 }
