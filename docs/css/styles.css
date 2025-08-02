@@ -97,7 +97,7 @@ body {
     border: none;
     width: 450px;
     height: 100px;
-    margin-left: 515px;
+    margin-left: 525px;
     margin-top: 450px;
     z-index: 5;
 }
@@ -112,8 +112,6 @@ body {
     border: none;
     width: 450px;
     height: 100px;
-    margin-left: 515px;
-    margin-top: 450px;
     z-index: 6;
 }
 
