@@ -17,10 +17,14 @@ async function main() {
 
         //Menu -- play button
         playbtn.addEventListener('click', () => {
-        //arcadeLogo.style.display = 'none';
-        playbtn.style.display = 'none';
-        leaderboardbtn.style.display = 'none';
-        menubtn.style.display = 'inline-block';
+
+            //Hiding arcade logo and buttons
+            document.getElementById("playbtn").onclick = function() {
+                document.getElementById("arcade-logo").style.visibility = "hidden";
+            }
+            playbtn.style.display = 'none';
+            leaderboardbtn.style.display = 'none';
+            menubtn.style.display = 'inline-block';
 
         //Game starts
             
@@ -29,8 +33,10 @@ async function main() {
         //Menu -- leaderboard button
         leaderboardbtn.addEventListener('click', () => {
 
-            //Hiding buttons
-            //arcadeLogo.style.display = 'none';
+            //Hiding arcade logo and buttons
+            document.getElementById("playbtn").onclick = function() {
+                document.getElementById("arcade-logo").style.visibility = "hidden";
+            }
             playbtn.style.display = 'none';
             leaderboardbtn.style.display = 'none';
             menubtn.style.display = 'inline-block';
@@ -46,7 +52,10 @@ async function main() {
             menubtn.style.display = 'none'; //hide menu button
             menuClicked = true;
 
-            //Display Menu -- reveal play and leaderboard buttons
+            //Display Menu -- reveal play and leaderboard buttons and arcade logo
+            document.getElementById("menubtn").onclick = function() {
+                document.getElementById("arcade-logo").style.visibility = "visible";
+            }
             playbtn.style.display = 'inline-block';
             leaderboardbtn.style.display = 'inline-block';
         });
