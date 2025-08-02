@@ -97,8 +97,9 @@ body {
     border: none;
     width: 340px;
     height: 100px;
-    margin-left: 525px;
+    margin-left: 605px;
     margin-top: 450px;
+    margin-right: 55px;
     z-index: 5;
 }
 
