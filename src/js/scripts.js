@@ -1,23 +1,28 @@
 //Defining Variables
 let leaderboardArray = [ ];
-const menubtn = document.getElementById("menubtn");
-const playbtn = document.getElementById("playbtn");
-const leaderboardbtn = document.getElementById("leaderboardbtn");
-const arcadeLogo = document.getElementById("arcade-logo");
 let menuClicked;
 
 //Function -- main
 async function main() {
+
+    //Defining Variables
+    const menubtn = document.getElementById("menubtn");
+    const playbtn = document.getElementById("playbtn");
+    const leaderboardbtn = document.getElementById("leaderboardbtn");
+    const arcadeLogo = document.getElementById("arcade-logo");
+
+    //Game start
     do {
         menubtn.style.display = 'none';
 
         //Menu -- play button
         playbtn.addEventListener('click', () => {
-            arcadeLogo.style.display = 'none';
-            playbtn.style.display = 'none';
-            leaderboardbtn.style.display = 'none';
+        //arcadeLogo.style.display = 'none';
+        playbtn.style.display = 'none';
+        leaderboardbtn.style.display = 'none';
+        menubtn.style.display = 'inline-block';
 
-            //Game starts
+        //Game starts
             
         });
 
@@ -25,9 +30,10 @@ async function main() {
         leaderboardbtn.addEventListener('click', () => {
 
             //Hiding buttons
-            arcadeLogo.style.display = 'none';
+            //arcadeLogo.style.display = 'none';
             playbtn.style.display = 'none';
             leaderboardbtn.style.display = 'none';
+            menubtn.style.display = 'inline-block';
 
             //Displaying scores
             for (let score of leaderboardArray) {
