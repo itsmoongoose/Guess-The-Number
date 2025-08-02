@@ -4,6 +4,7 @@ const menubtn = document.getElementById("menubtn");
 const playbtn = document.getElementById("playbtn");
 const leaderboardbtn = document.getElementById("leaderboardbtn");
 const arcadeLogo = document.getElementById("arcade-logo");
+let menuClicked;
 
 //Function -- main
 async function main() {
@@ -36,7 +37,7 @@ async function main() {
         //Menu -- return to menu
         menubtn.addEventListener('click', () => {
             menubtn.style.display = 'none'; //hide menu button
-            let menuClicked = true;
+            menuClicked = true;
 
             //Display Menu -- reveal play and leaderboard buttons
             playbtn.style.display = 'inline-block';
