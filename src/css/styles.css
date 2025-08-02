@@ -80,6 +80,7 @@ body {
 
 .arcade-logo {
     position: absolute;
+    visibility: visible;
     z-index: 2;
     width: 500px;
     height: 350px;
