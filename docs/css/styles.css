@@ -55,14 +55,19 @@ body {
     left: -9999px !important;
 }
 
-/*
+/* temporarily moving container off page */
 .container {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    /*
     margin: 0;
     width: 830px;
     height: 750px;
     transform: translate(67%, -116%);
+    */
 }
-*/
+
 
 .flash>.editing::after {
  content: "|";
