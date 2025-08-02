@@ -1,6 +1,5 @@
 //Defining Variables
 let leaderboardArray = [ ];
-let menuClicked;
 
 //Function -- main
 async function main() {
