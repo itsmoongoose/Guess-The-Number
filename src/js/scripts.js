@@ -9,6 +9,7 @@ let menuClicked;
 //Function -- main
 async function main() {
     do {
+        menubtn.style.display = 'none';
 
         //Menu -- play button
         playbtn.addEventListener('click', () => {
