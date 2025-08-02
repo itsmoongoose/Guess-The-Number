@@ -148,6 +148,7 @@ body {
 
 .menubtn {
     background-image: url('../img/menu-button.png');
+    /* image cropped --- 2200 x 630 */
     background-repeat: no-repeat;
     background-color: transparent;
     background-size: contain;
@@ -155,6 +156,8 @@ body {
     border: none;
     width: 340px;
     height: 100px;
+    margin-left: 800px;
+    margin-top: 550px;
     z-index: 5;
 }
 
@@ -168,7 +171,5 @@ body {
     border: none;
     width: 340px;
     height: 100px;
-    margin-left: 515px;
-    margin-top: 450px;
     z-index: 6;
 }
