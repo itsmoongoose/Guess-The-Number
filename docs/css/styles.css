@@ -104,6 +104,7 @@ body {
 
 .playbtn:hover {
     background-image: url('../img/play-button-hover.png');
+    /* image cropped --- 2200 x 630 */
     background-repeat: no-repeat;
     background-color: transparent;
     background-size: contain;
@@ -130,6 +131,7 @@ body {
 
 .leaderboardbtn:hover {
     background-image: url('../img/leaderboard-button-hover.png');
+    /* image cropped --- 2200 x 630 */
     background-repeat: no-repeat;
     background-color: transparent;
     background-size: contain;
@@ -137,8 +139,7 @@ body {
     border: none;
     width: 450px;
     height: 100px;
-    margin-left: 515px;
-    margin-top: 450px;
+
     z-index: 6;
 }
 
@@ -156,6 +157,7 @@ body {
 
 .menubtn:hover {
     background-image: url('../img/menu-button-hover.png');
+    /* image cropped --- 2200 x 630 */
     background-repeat: no-repeat;
     background-color: transparent;
     background-size: contain;
