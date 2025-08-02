@@ -138,3 +138,27 @@ body {
     margin-top: 450px;
     z-index: 6;
 }
+
+.menubtn {
+    background-image: url('../img/menu-button.png');
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-size: contain;
+    background-position: center;
+    border: none;
+    width: 450px;
+    height: 100px;
+    z-index: 5;
+}
+
+.menubtn:hover {
+    background-image: url('../img/menu-button-hover.png');
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-size: contain;
+    background-position: center;
+    border: none;
+    width: 450px;
+    height: 100px;
+    z-index: 5;
+}
