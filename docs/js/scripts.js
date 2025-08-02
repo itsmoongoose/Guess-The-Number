@@ -18,7 +18,7 @@ async function main() {
     playbtn.addEventListener('click', function() {
 
         //Hiding arcade logo and buttons
-        arcadeLogo.style.visibility = "hidden";
+        arcadeLogo.style.display = 'none';
         playbtn.style.display = 'none';
         leaderboardbtn.style.display = 'none';
         menubtn.style.display = 'inline-block';
@@ -31,7 +31,7 @@ async function main() {
     leaderboardbtn.addEventListener('click', function() {
 
         //Hiding arcade logo and buttons
-        arcadeLogo.style.visibility = "hidden";
+        arcadeLogo.style.display = 'none';
         playbtn.style.display = 'none';
         leaderboardbtn.style.display = 'none';
         menubtn.style.display = 'inline-block';
@@ -48,9 +48,7 @@ async function main() {
         menuClicked = true;
 
         //Display Menu -- reveal play and leaderboard buttons and arcade logo
-        document.getElementById("menubtn").onclick = function() {
-            document.getElementById("arcade-logo").style.visibility = "visible";
-        }
+        arcadeLogo.style.display = 'inline-block';
         playbtn.style.display = 'inline-block';
         leaderboardbtn.style.display = 'inline-block';
     });
