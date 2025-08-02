@@ -9,18 +9,24 @@ async function main() {
     const playbtn = document.getElementById("playbtn");
     const leaderboardbtn = document.getElementById("leaderboardbtn");
     const arcadeLogo = document.getElementById("arcade-logo");
+    const container = document.getElementById("container");
+    const containerOutput = document.getElementById("output");
 
-    //Game start
+    //Hiding elements
     menubtn.style.display = 'none';
+    container.style.dispaly = 'none';
+    containerOutput.style.display = 'none';
 
     //Menu -- play button
     playbtn.addEventListener('click', function() {
 
-        //Hiding arcade logo and buttons
+        //Hiding and revealing elements
         arcadeLogo.style.display = 'none';
         playbtn.style.display = 'none';
         leaderboardbtn.style.display = 'none';
         menubtn.style.display = 'inline-block';
+        container.style.display = "inline-block";
+        containerOutput.style.display = "inline-block";
 
         //Game starts
         
@@ -35,6 +41,8 @@ async function main() {
         playbtn.style.display = 'none';
         leaderboardbtn.style.display = 'none';
         menubtn.style.display = 'inline-block';
+        container.style.display = "inline-block";
+        containerOutput.style.display = "inline-block";
 
         //Displaying scores
         for (let score of leaderboardArray) {
