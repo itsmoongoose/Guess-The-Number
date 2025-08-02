@@ -162,5 +162,7 @@ body {
     border: none;
     width: 450px;
     height: 100px;
-    z-index: 5;
+    margin-left: 515px;
+    margin-top: 450px;
+    z-index: 6;
 }
