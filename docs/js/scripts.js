@@ -22,8 +22,9 @@ async function main() {
         leaderboardbtn.style.display = 'none';
         menubtn.style.display = 'inline-block';
 
-    //Game starts
+        //Game starts
         
+
     });
 
     //Menu -- leaderboard button
