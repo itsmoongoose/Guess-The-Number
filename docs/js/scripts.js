@@ -90,10 +90,20 @@ async function main() {
                     if (!leaderboardName) {
                         output("You must entere at least 1 non-whitespace character to continue: ");
                         leaderboardName = await input("");
+                        leaderboardName = leaderboardName.trim();
 
                     //name already exists in leaderboard
                     } else if (leaderboardName in leaderboard1 || leaderboardName in leaderboard2) {
                         output("This name is already on the leaderboard. Please choose another: ");
+                        leaderboardName = await input("");
+                        leaderboardName = leaderboardName.trim();
+                    }
+                    
+                    //adding name to leaderboard
+                    if (guessTracker == 1) {
+                        leaderboard1[leaderboardName] = guessTracker;
+                    } else {
+                        leaderboard2[leaderboardName] = guessTracker;
                     }
                 }
             }
