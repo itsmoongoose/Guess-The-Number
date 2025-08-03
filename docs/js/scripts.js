@@ -1,5 +1,6 @@
 //Defining Variables
-let leaderboardArray = [ ];
+let leaderboard1 = [ ]; //leaderboard array for scores that only took 1 guess
+let leaderboard2 = [ ]; //leaderboard array for scores with 2+ guesses
 const menubtn = document.getElementById("menubtn");
 const playbtn = document.getElementById("playbtn");
 const leaderboardbtn = document.getElementById("leaderboardbtn");
@@ -36,7 +37,10 @@ async function main() {
             let guessTracker = 0;
             output("Guess a number between 1 and 100: ");
             let userGuess = await input("");
+
+            //Incorrect Guess
             while (userGuess != correctNum) {
+                guessTracker = guessTracker + 1;
 
                 //Invalid Guess -- throws error
                 while (isNaN(userGuess) || !userGuess || userGuess < 1 || userGuess > 100) {
@@ -45,17 +49,45 @@ async function main() {
 
                 //Guess is too high
                 if (userGuess > correctNum) {
-                    guessTracker = guessTracker + 1;
                     output("Too Low! Guess Again: ");
                     await input("");
                 }
 
                 //Guess is too low
                 if (userGuess < correctNum) {
-                    guessTracker = guessTracker + 1;
                     output("Too High! Guess Again: ");
                     await input("");
                 }
+            }
+
+            //Correct Guess
+            if (userGuess == correctNum) {
+                let leaderboardName = "";
+                //1 guess
+                if (guessTracker == 1) {
+                    output("INCREDIBLE! You guessed the number in 1 try! \nPlease enter your name to be displayed on the leaderboard: ");
+                    leaderboardName = await input("");
+                    leaderboardName = leaderboardName.trim();
+                    leaderboard1[leaderboardName] = guessTracker; //adding name and score to leaderboard1
+                } else {
+                    //Multiple guesses
+                    output("Congratulations! You guess the number in " + guessTracker + " tries! \nPlease enter your name to be displayed on the leaderboard: ");
+                    leaderboardName = await input("");
+                    leaderboardName = leaderboardName.trim();
+                    leaderboard2[leaderboardName] = guessTracker; //adding name and score to leaderboard2
+                }
+
+                //Invalid leaderboard name
+                while (!leaderboardName || leaderboardName in leaderboard1 || leaderboardName in leaderboard2) {
+                    if (!leaderboardName) {
+                        output("You must entere at least 1 non-whitespace character to continue: ");
+                        leaderboardName = await input("");
+                    } else if (leaderboardName in leaderboard1 || leaderboardName in leaderboard2) {
+                        output("This name is already on the leaderboard. Please choose another: ");
+                    }
+                }
+
+
             }
 
         });
