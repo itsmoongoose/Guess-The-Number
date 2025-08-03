@@ -21,9 +21,11 @@ body {
 }
 
 #output {
-    background-color: var(--purple);
+    background-color: var(--white);
     overflow-y: auto;
-    height: 64vh;
+    width: 800px;
+    height: 500px;
+    /*height: 64vh;*/
     margin: 0;
     padding: 0;
     border: 5px solid var(--purple);
@@ -56,10 +58,6 @@ body {
 }
 
 .container {
-    margin: 0;
-    width: 830px;
-    height: 750px;
-    transform: translate(67%, -116%);
     z-index: 4;
 }
 
