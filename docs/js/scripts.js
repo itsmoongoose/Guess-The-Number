@@ -79,17 +79,18 @@ async function main() {
 
                 //Invalid leaderboard name
                 while (!leaderboardName || leaderboardName in leaderboard1 || leaderboardName in leaderboard2) {
+                    
+                    //empty name
                     if (!leaderboardName) {
                         output("You must entere at least 1 non-whitespace character to continue: ");
                         leaderboardName = await input("");
+
+                    //name already exists in leaderboard
                     } else if (leaderboardName in leaderboard1 || leaderboardName in leaderboard2) {
                         output("This name is already on the leaderboard. Please choose another: ");
                     }
                 }
-
-
             }
-
         });
 
         //Menu -- leaderboard button
@@ -99,7 +100,10 @@ async function main() {
             hideElements();
 
             //Displaying scores
-            for (let score of leaderboardArray) {
+            for (let score of leaderboard1) {
+                output(score);
+            }
+            for (score of leaderboard2) {
                 output(score);
             }
         });
