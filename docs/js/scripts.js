@@ -42,31 +42,30 @@ async function main() {
 
             //Incorrect Guess
             while (userGuess != correctNum) {
-                guessTracker = guessTracker + 1;
+
+                //Guess is too high
+                if (userGuess > correctNum) {
+                    guessTracker = guessTracker + 1;
+                    output("Too High! Guess Again: ");
+                    userGuess = await input("");
+                }
+
+                //Guess is too low
+                if (userGuess < correctNum) {
+                    guessTracker = guessTracker + 1;
+                    output("Too Low! Guess Again: ");
+                    userGuess = await input("");
+                }
 
                 //Invalid Guess -- throws error
                 while (isNaN(userGuess) || !userGuess || userGuess < 1 || userGuess > 100) {
                     throw new Error("Guess must be a number between 1 and 100");
                 }
-
-                //Guess is too high
-                if (userGuess > correctNum) {
-                    output("Too High! Guess Again: ");
-                    await input("");
-                }
-
-                //Guess is too low
-                if (userGuess < correctNum) {
-                    output("Too Low! Guess Again: ");
-                    await input("");
-                }
             }
 
             //Correct Guess
             if (userGuess == correctNum) {
-                if (guessTracker == 0) {
-                    guessTracker = 1;
-                }
+                guessTracker = guessTracker + 1;
                 let leaderboardName = "";
 
                 //1 guess
