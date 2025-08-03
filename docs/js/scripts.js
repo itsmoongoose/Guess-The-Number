@@ -35,7 +35,6 @@ async function main() {
 
             //Game -- generate number
             let correctNum = Math.round(Math.random() * 100) + 1;
-            output(correctNum);
             let guessTracker = 0;
             output("Guess a number between 1 and 100: ");
             let userGuess = await input("");
