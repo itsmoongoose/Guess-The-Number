@@ -51,13 +51,13 @@ async function main() {
 
                 //Guess is too high
                 if (userGuess > correctNum) {
-                    output("Too Low! Guess Again: ");
+                    output("Too High! Guess Again: ");
                     await input("");
                 }
 
                 //Guess is too low
                 if (userGuess < correctNum) {
-                    output("Too High! Guess Again: ");
+                    output("Too Low! Guess Again: ");
                     await input("");
                 }
             }
