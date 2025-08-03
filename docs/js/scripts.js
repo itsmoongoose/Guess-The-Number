@@ -1,6 +1,6 @@
 //Defining Variables
-let leaderboard1 = [ ]; //leaderboard array for scores that only took 1 guess
-let leaderboard2 = [ ]; //leaderboard array for scores with 2+ guesses
+let leaderboard1 = { }; //leaderboard array for scores that only took 1 guess
+let leaderboard2 = { }; //leaderboard array for scores with 2+ guesses
 const menubtn = document.getElementById("menubtn");
 const playbtn = document.getElementById("playbtn");
 const leaderboardbtn = document.getElementById("leaderboardbtn");
@@ -20,6 +20,7 @@ function hideElements() {
 
 //Function -- main
 async function main() {
+
     try {
         //Hiding elements
         menubtn.style.display = 'none';
@@ -34,6 +35,7 @@ async function main() {
 
             //Game -- generate number
             let correctNum = Math.round(Math.random() * 100) + 1;
+            output(correctNum);
             let guessTracker = 0;
             output("Guess a number between 1 and 100: ");
             let userGuess = await input("");
@@ -62,14 +64,19 @@ async function main() {
 
             //Correct Guess
             if (userGuess == correctNum) {
+                if (guessTracker == 0) {
+                    guessTracker = 1;
+                }
                 let leaderboardName = "";
+
                 //1 guess
                 if (guessTracker == 1) {
-                    output("INCREDIBLE! You guessed the number in 1 try! \nPlease enter your name to be displayed on the leaderboard: ");
+                    output("INCREDIBLE! You guessed the number in a single try! \nPlease enter your name to be displayed on the leaderboard: ");
                     leaderboardName = await input("");
                     leaderboardName = leaderboardName.trim();
                     leaderboard1[leaderboardName] = guessTracker; //adding name and score to leaderboard1
                 } else {
+
                     //Multiple guesses
                     output("Congratulations! You guess the number in " + guessTracker + " tries! \nPlease enter your name to be displayed on the leaderboard: ");
                     leaderboardName = await input("");
@@ -120,7 +127,7 @@ async function main() {
             containerOutput.style.display = 'none';
         });
 
-    //try ends
+    //try statement ends
     } catch(error) {
         output(`Error: ${error}`);
     }
