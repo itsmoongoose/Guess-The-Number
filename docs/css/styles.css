@@ -39,7 +39,7 @@ body {
     margin: 0;
     color: var(--pink);
     font-weight: thin;
-    font-size: 30px;
+    font-size: 23px;
 }
 
 #output .error {
