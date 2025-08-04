@@ -53,13 +53,6 @@ async function main() {
             //Hiding and revealing elements
             hideElements();
 
-            //Loads web page in the center
-            window.scrollTo({
-                top: 0,
-                left: 200,
-                behavior: auto,
-            });
-
             //Game -- generate number
             let correctNum = Math.round(Math.random() * 100) + 1;
             output(correctNum);
