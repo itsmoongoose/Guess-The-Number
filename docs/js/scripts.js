@@ -140,10 +140,10 @@ async function main() {
 
             //Displaying scores
             for (let [username, score] of Object.entries(leaderboard1)) {
-                output(`${username}     ${score}`);
+                output(`${username}  ${score}`);
             }
             for (let [username, score] of Object.entries(leaderboard2)) {
-                output(`${username}     ${score}`);
+                output(`${username}  ${score}`);
             }
         });
 
