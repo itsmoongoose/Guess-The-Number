@@ -111,6 +111,9 @@ async function main() {
                 } else {
                     leaderboard2[leaderboardName] = guessTracker;
                 }
+
+                //return to menu message
+                menuMessage();
             }
         });
 
