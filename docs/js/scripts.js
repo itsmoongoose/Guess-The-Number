@@ -20,7 +20,7 @@ function hideElements() {
 
 //Function -- return to menu message
 function menuMessage() {
-    output("Successfully added score to leaderboard. \nReturn to the menu to view the leaderboard or play again!");
+    output("Successfully added score to leaderboard! \nReturn to the menu to view the leaderboard or play again.");
 }
 
 //Function -- main
