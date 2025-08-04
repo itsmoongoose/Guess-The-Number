@@ -157,6 +157,9 @@ async function main() {
             leaderboardbtn.style.display = 'inline-block';
             container.style.display = 'none';
             containerOutput.style.display = 'none';
+
+            //Removing previous outputs
+            containerOutput.innerHTML = "";
         });
 
     //try statement ends
