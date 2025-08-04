@@ -18,6 +18,11 @@ function hideElements() {
     containerOutput.style.display = 'inline-block';
 }
 
+//Function -- return to menu message
+function menuMessage() {
+    output("Successfully added score to leaderboard. \nReturn to the menu to view the leaderboard or play again!");
+}
+
 //Function -- main
 async function main() {
 
