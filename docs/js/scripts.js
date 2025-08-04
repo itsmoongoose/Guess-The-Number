@@ -98,13 +98,13 @@ async function main() {
                         leaderboardName = await input("");
                         leaderboardName = leaderboardName.trim();
                     }
-                    
-                    //adding name to leaderboard
-                    if (guessTracker == 1) {
-                        leaderboard1[leaderboardName] = guessTracker;
-                    } else {
-                        leaderboard2[leaderboardName] = guessTracker;
-                    }
+                }
+
+                //adding name to leaderboard
+                if (guessTracker == 1) {
+                    leaderboard1[leaderboardName] = guessTracker;
+                } else {
+                    leaderboard2[leaderboardName] = guessTracker;
                 }
             }
         });
