@@ -1,6 +1,21 @@
+//Test leaderboards
+let leaderboard1 = {
+    "lewis": 10,
+    "bonnabel": 4,
+    "marceline": 2,
+    "ricardio": 19,
+}
+let leaderboard2 = {
+    "lewis": 1,
+    "roey": 6,
+    "finn": 9,
+}
+
+
+
 //Defining Variables
-let leaderboard1 = { }; //leaderboard array for scores that only took 1 guess
-let leaderboard2 = { }; //leaderboard array for scores with 2+ guesses
+//let leaderboard1 = { }; //leaderboard array for scores that only took 1 guess
+//let leaderboard2 = { }; //leaderboard array for scores with 2+ guesses
 const menubtn = document.getElementById("menubtn");
 const playbtn = document.getElementById("playbtn");
 const leaderboardbtn = document.getElementById("leaderboardbtn");
@@ -124,11 +139,11 @@ async function main() {
             hideElements();
 
             //Displaying scores
-            for (let score of leaderboard1) {
-                output(score);
+            for (let [username, score] of Object.entries(leaderboard1)) {
+                output(`${username}     ${score}`);
             }
-            for (score of leaderboard2) {
-                output(score);
+            for (let [username, score] of Object.entries(leaderboard2)) {
+                output(`${username}     ${score}`);
             }
         });
 
