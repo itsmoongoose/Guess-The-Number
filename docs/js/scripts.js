@@ -54,7 +54,7 @@ async function main() {
             hideElements();
 
             //Game -- generate number
-            let correctNum = Math.round(Math.random() * 100) + 1;
+            let correctNum = Math.round(Math.random() * 99) + 1;
             output(correctNum);
             let guessTracker = 0;
             output("Guess a number between 1 and 100: ");
