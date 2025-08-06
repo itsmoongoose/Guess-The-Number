@@ -1,6 +1,10 @@
 //Test leaderboards
-let leaderboard1 = {}
-let leaderboard2 = {}
+let leaderboard1 = {
+    lewis: 1,
+}
+let leaderboard2 = {
+    lewislemay: 5,
+}
 
 //Defining Variables
 //let leaderboard1 = { }; //leaderboard array for scores that only took 1 guess
@@ -133,6 +137,7 @@ async function main() {
         hideElements();
 
         //Displaying scores
+        output(" \n \n \n");
         for (let [username, score] of Object.entries(leaderboard1)) {
             output(`${username}  ${score}`);
         }
