@@ -71,7 +71,7 @@ body {
 }
 
 .screenSize {
-    width: 1920px;
+    width: 1900px;
     height: 1080px;
     background-image: url('../img/arcade-background-blank-1080.png');
     background-size: cover;
