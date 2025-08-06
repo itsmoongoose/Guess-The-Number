@@ -63,6 +63,11 @@ async function main() {
             //Incorrect Guess
             while (userGuess != correctNum) {
 
+                //Invalid Guess -- throws error
+                while (isNaN(userGuess) || !userGuess || userGuess < 1 || userGuess > 100) {
+                    throw new Error("Guess must be a number between 1 and 100");
+                }
+                
                 //Guess is too high
                 if (userGuess > correctNum) {
                     guessTracker = guessTracker + 1;
@@ -75,11 +80,6 @@ async function main() {
                     guessTracker = guessTracker + 1;
                     output("Too Low! Guess Again: ");
                     userGuess = await input("");
-                }
-
-                //Invalid Guess -- throws error
-                while (isNaN(userGuess) || !userGuess || userGuess < 1 || userGuess > 100) {
-                    throw new Error("Guess must be a number between 1 and 100");
                 }
             }
 
