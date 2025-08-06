@@ -22,9 +22,9 @@ body {
 }
 
 #output {
-    background-color: var(--purple);
+    background-color: var(--white);
     overflow-y: auto;
-    width: 840px;
+    width: 805px;
     height: 595px;
     margin-top: 70px;
     margin-left: 545px;
@@ -62,6 +62,9 @@ body {
 
 .container {
     z-index: 4;
+    background-color: var(--purple);
+    width: 1px;
+    height: 1px;
 }
 
 
