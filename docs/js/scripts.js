@@ -138,15 +138,19 @@ async function main() {
         //Hiding and revealing elements
         hideElements();
         leaderboardTitle.style.display = 'inline-block';
+        output(" \n \n \n"); // adds 3 lines of space underneath leaderboardTitle (image) to separate output/container
 
         //Displaying scores
-        output(" \n \n \n");
         for (let [username, score] of Object.entries(leaderboard1)) {
             output(`${username}  ${score}`);
         }
         for (let [username, score] of Object.entries(leaderboard2)) {
             output(`${username}  ${score}`);
         }
+
+        //No scores yet
+        
+        
     });
 
     //Menu -- return to menu
