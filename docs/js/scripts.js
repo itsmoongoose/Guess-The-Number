@@ -1,17 +1,6 @@
 //Test leaderboards
-let leaderboard1 = {
-    "lewis": 10,
-    "bonnabel": 4,
-    "marceline": 2,
-    "ricardio": 19,
-}
-let leaderboard2 = {
-    "lewis": 1,
-    "roey": 6,
-    "finn": 9,
-}
-
-
+let leaderboard1 = {}
+let leaderboard2 = {}
 
 //Defining Variables
 //let leaderboard1 = { }; //leaderboard array for scores that only took 1 guess
@@ -22,6 +11,7 @@ const leaderboardbtn = document.getElementById("leaderboardbtn");
 const arcadeLogo = document.getElementById("arcade-logo");
 const container = document.getElementById("container");
 const containerOutput = document.getElementById("output");
+let leaderboardName = "";
 
 //Function -- hide and reveal elements
 function hideElements() {
@@ -36,6 +26,25 @@ function hideElements() {
 //Function -- return to menu message
 function menuMessage() {
     output("Successfully added score to leaderboard! \nReturn to the menu to view the leaderboard or play again.");
+}
+
+//Function -- invalid name
+async function invalidName() {
+    while (!leaderboardName || leaderboardName in leaderboard1 || leaderboardName in leaderboard2) {
+        
+        //empty name
+        if (!leaderboardName) {
+            output("You must enter at least 1 non-whitespace character to continue: ");
+            leaderboardName = await input("");
+            leaderboardName = leaderboardName.trim();
+
+        //name already exists in leaderboard
+        } else if (leaderboardName in leaderboard1 || leaderboardName in leaderboard2) {
+            output("This name is already on the leaderboard. Please choose another: ");
+            leaderboardName = await input("");
+            leaderboardName = leaderboardName.trim();
+        }
+    }
 }
 
 //Function -- main
@@ -93,6 +102,7 @@ async function main() {
                 output("INCREDIBLE! You guessed the number in a single try! \nPlease enter your name to be displayed on the leaderboard: ");
                 leaderboardName = await input("");
                 leaderboardName = leaderboardName.trim();
+                invalidName();
                 leaderboard1[leaderboardName] = guessTracker; //adding name and score to leaderboard1
             } else {
 
@@ -100,24 +110,8 @@ async function main() {
                 output("Congratulations! You guessed the number in " + guessTracker + " tries! \nPlease enter your name to be displayed on the leaderboard: ");
                 leaderboardName = await input("");
                 leaderboardName = leaderboardName.trim();
+                invalidName();
                 leaderboard2[leaderboardName] = guessTracker; //adding name and score to leaderboard2
-            }
-
-            //Invalid leaderboard name
-            while (!leaderboardName || leaderboardName in leaderboard1 || leaderboardName in leaderboard2) {
-                
-                //empty name
-                if (!leaderboardName) {
-                    output("You must enter at least 1 non-whitespace character to continue: ");
-                    leaderboardName = await input("");
-                    leaderboardName = leaderboardName.trim();
-
-                //name already exists in leaderboard
-                } else if (leaderboardName in leaderboard1 || leaderboardName in leaderboard2) {
-                    output("This name is already on the leaderboard. Please choose another: ");
-                    leaderboardName = await input("");
-                    leaderboardName = leaderboardName.trim();
-                }
             }
 
             //adding name to leaderboard
