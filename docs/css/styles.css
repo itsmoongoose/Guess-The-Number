@@ -144,6 +144,18 @@ body {
     z-index: 6;
 }
 
+.leaderboardTitle {
+    background-image: url('../img/leaderboard-title.png');
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-size: contain;
+    background-position: center;
+    border: none;
+    width: 340px;
+    height: 100px;
+    z-index: 5;
+}
+
 .menubtn {
     background-image: url('../img/menu-button.png');
     /* image cropped --- 2200 x 630 */
