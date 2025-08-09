@@ -124,7 +124,7 @@ body {
 }
 
 @keyframes shadowManHidden {
-    from {opacity: 0.4}
+    from {opacity: 0.5}
     to {opacity: 0;}
 }
 
