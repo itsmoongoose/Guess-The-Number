@@ -61,7 +61,7 @@ async function main() {
 
     //Hiding elements
     menubtn.style.display = 'none';
-    container.style.dispaly = 'none';
+    container.style.display = 'none';
     containerOutput.style.display = 'none';
     leaderboardTitle.style.display = 'none';
     guessthenumberTitle.style.display = 'none';
@@ -166,6 +166,7 @@ async function main() {
         containerOutput.style.display = 'none';
         leaderboardTitle.style.display = 'none';
         guessthenumberTitle.style.display = 'none';
+        shadowManRest.style.display = 'none';
         arcadeLogo.style.display = 'inline-block';
         playbtn.style.display = 'inline-block';
         leaderboardbtn.style.display = 'inline-block';
