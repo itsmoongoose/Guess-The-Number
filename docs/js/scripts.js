@@ -16,6 +16,7 @@ const arcadeLogo = document.getElementById("arcade-logo");
 const container = document.getElementById("container");
 const containerOutput = document.getElementById("output");
 const leaderboardTitle = document.getElementById("leaderboard-title");
+const guessthenumberTitle = document.getElementById("guess-the-number-title");
 let leaderboardName = "";
 
 //Function -- hide and reveal elements
@@ -60,12 +61,15 @@ async function main() {
     container.style.dispaly = 'none';
     containerOutput.style.display = 'none';
     leaderboardTitle.style.display = 'none';
+    guessthenumberTitle.style.display = 'none';
 
     //Menu -- play button
     playbtn.addEventListener('click', async function() {
 
         //Hiding and revealing elements
         hideElements();
+        guessthenumberTitle.style.display = 'inline-block';
+        output(" \n \n \n"); // adds 3 lines of space underneath leaderboardTitle (image) to separate output/container
 
         //Game -- generate number
         let correctNum = Math.round(Math.random() * 99) + 1;
