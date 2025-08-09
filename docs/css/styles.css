@@ -5,6 +5,7 @@ html {
     --black: #111;
     --purple: #0a031a;
     --pink: #fc9bd5;
+    --lightpink: #ffe4f4;
     --error: #F00;
     --meta: #0FF;
     --debug: #FF0;
@@ -37,7 +38,7 @@ body {
 
 #output p {
     margin: 0;
-    color: var(--pink);
+    color: var(--lightpink);
     font-weight: thin;
     font-size: 23px;
 }
