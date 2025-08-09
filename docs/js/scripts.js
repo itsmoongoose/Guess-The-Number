@@ -145,7 +145,6 @@ async function main() {
 
         //0 games played
         if (gameTracker == 0) {
-            shadowManRest.style.display = 'inline-block'; //for testing -- delete once finished
             displayLeaderboard();
         }
 
