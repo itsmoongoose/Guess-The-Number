@@ -14,6 +14,7 @@ const guessthenumberTitle = document.getElementById("guess-the-number-title");
 const shadowManRest = document.getElementById("shadow-man-rest");
 let leaderboardName = "";
 let gameTracker = 0;
+let jumpscareSequence = 0;
 
 //Function -- hide and reveal elements
 function hideElements() {
@@ -142,8 +143,13 @@ async function main() {
 
         //1 game played
         if (gameTracker == 1) {
+
+            //tests if the jumpscare has run already
+            if (jumpscareSequence == 0) {
             shadowManRest.style.display = 'inline-block';
+            }
             displayLeaderboard();
+            jumpscareSequence = 1;
         }
 
     });
