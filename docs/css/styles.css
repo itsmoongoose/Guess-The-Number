@@ -109,6 +109,11 @@ body {
     z-index: 5;
 }
 
+@keyframes shadowManHidden {
+    from {opacity: 0.4;}
+    to {opacity: 0;}
+}
+
 .shadowManRest {
     background-image: url('../img/shadow-man-rest.png');
     background-repeat: no-repeat;
@@ -119,6 +124,9 @@ body {
     width: 805px;
     top: 75px;
     left: 550px;
+    opacity: 0;
+    animation-name: shadowManHidden;
+    animation-duration: 3s;
     z-index: 1;
 }
 
