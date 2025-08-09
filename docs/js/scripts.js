@@ -25,11 +25,6 @@ function hideElements() {
     containerOutput.style.display = 'inline-block';
 }
 
-//Function -- return to menu message
-function menuMessage() {
-    output("Successfully added score to leaderboard! \nReturn to the menu to view the leaderboard or play again.");
-}
-
 //Function -- display leaderboard score
 function displayLeaderboard() {
     for (let [username, score] of Object.entries(leaderboard)) {
@@ -108,10 +103,9 @@ async function main() {
                     output("You must enter at least 1 non-whitespace character to continue: ");
                     leaderboardName = await input("");
                     leaderboardName = leaderboardName.trim();
-                }
                 
                 //name already exists in leaderboard
-                if (leaderboardName in leaderboard) {
+                } else if (leaderboardName in leaderboard) {
                     output("This name is already on the leaderboard. Please choose another: ");
                     leaderboardName = await input("");
                     leaderboardName = leaderboardName.trim();
@@ -129,8 +123,7 @@ async function main() {
 
             //}
 
-            //return to menu message
-            menuMessage();
+            output("Successfully added score to leaderboard!");
         }
     });
 
