@@ -165,6 +165,7 @@ async function main() {
         container.style.display = 'none';
         containerOutput.style.display = 'none';
         leaderboardTitle.style.display = 'none';
+        guessthenumberTitle.style.display = 'none';
         arcadeLogo.style.display = 'inline-block';
         playbtn.style.display = 'inline-block';
         leaderboardbtn.style.display = 'inline-block';
