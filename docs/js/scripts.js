@@ -48,6 +48,13 @@ async function invalidName() {
     }
 }
 
+//Function -- display leaderboard score
+function displayLeaderboard() {
+    for (let [username, score] of Object.entries(leaderboard)) {
+            output(`${username}  ${score}`);
+        }
+}
+
 //Function -- main
 async function main() {
 
@@ -134,10 +141,17 @@ async function main() {
         leaderboardTitle.style.display = 'inline-block';
         output(" \n \n \n"); // adds 3 lines of space underneath leaderboardTitle (image) to separate output/container
 
-        //Displaying scores
-        for (let [username, score] of Object.entries(leaderboard)) {
-            output(`${username}  ${score}`);
+        //0 games played
+        if (gameTracker == 0) {
+            displayLeaderboard();
         }
+
+        //1 game played
+        if (gameTracker == 1) {
+            //img
+            displayLeaderboard();
+        }
+
     });
 
     //Menu -- return to menu
