@@ -75,7 +75,7 @@ async function main() {
         let correctNum = Math.round(Math.random() * 99) + 1;
         output(correctNum);
         let guessTracker = 0;
-        output("Guess a number between 1 and 100: ");
+        output("Guess a number from 1 to 100: ");
         let userGuess = await input("");
 
         //Incorrect Guess
@@ -83,7 +83,7 @@ async function main() {
 
             //Invalid Guess -- throws error
             while (isNaN(userGuess) || !userGuess || userGuess < 1 || userGuess > 100) {
-                output("ERROR - Guess must be a whole number between 1 and 100: ");
+                output("ERROR - Guess must be a whole number from 1 to 100: ");
                 userGuess = await input("");
             }
 
