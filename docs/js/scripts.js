@@ -30,25 +30,6 @@ function menuMessage() {
     output("Successfully added score to leaderboard! \nReturn to the menu to view the leaderboard or play again.");
 }
 
-//Function -- invalid name
-async function invalidName() {
-    while (!leaderboardName || leaderboardName in leaderboard) {
-        
-        //empty name
-        if (!leaderboardName) {
-            output("You must enter at least 1 non-whitespace character to continue: ");
-            leaderboardName = await input("");
-            leaderboardName = leaderboardName.trim();
-
-        //name already exists in leaderboard
-        } else if (leaderboardName in leaderboard) {
-            output("This name is already on the leaderboard. Please choose another: ");
-            leaderboardName = await input("");
-            leaderboardName = leaderboardName.trim();
-        }
-    }
-}
-
 //Function -- display leaderboard score
 function displayLeaderboard() {
     for (let [username, score] of Object.entries(leaderboard)) {
@@ -118,7 +99,25 @@ async function main() {
             //Getting leaderboard name
             let leaderboardName = await input("");
             leaderboardName = leaderboardName.trim();
-            invalidName();
+
+            //ERROR -- Name is blank or already exists
+            while (!leaderboardName || leaderboardName in leaderboard) {
+        
+                //empty name
+                if (!leaderboardName) {
+                    output("You must enter at least 1 non-whitespace character to continue: ");
+                    leaderboardName = await input("");
+                    leaderboardName = leaderboardName.trim();
+                }
+                
+                //name already exists in leaderboard
+                if (leaderboardName in leaderboard) {
+                    output("This name is already on the leaderboard. Please choose another: ");
+                    leaderboardName = await input("");
+                    leaderboardName = leaderboardName.trim();
+                }
+            }
+
             gameTracker = gameTracker + 1;
             if (gameTracker == 1) {
                 leaderboard["Nathan"] = 7;
