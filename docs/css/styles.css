@@ -26,10 +26,10 @@ body {
     /*background-color: var(--purple);*/
     background-color: transparent;
     overflow-y: auto;
-    width: 805px;
-    height: 485px;
-    margin-top: 70px;
-    margin-left: 545px;
+    width: 750px;
+    height: 440px;
+    margin-top: 65px;
+    margin-left: 570px;
     padding: 5px;
     border: 5px solid var(--purple);
     border-radius: 12px;
@@ -91,8 +91,8 @@ body {
     z-index: 2;
     width: 500px;
     height: 350px;
-    top: 70px;
-    left: 716px;
+    top: 60px;
+    left: 710px;
 }
 
 .guessthenumberTitle {
@@ -103,14 +103,28 @@ body {
     background-position: center;
     position: absolute;
     border: none;
-    width: 300px;
+    width: 290px;
     top: 80px;
-    left: 550px;
+    left: 575px;
+    z-index: 5;
+}
+
+.leaderboardTitle {
+    background-image: url('../img/leaderboard-title.png');
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    border: none;
+    width: 215px;
+    top: 80px;
+    left: 575px;
     z-index: 5;
 }
 
 @keyframes shadowManHidden {
-    from {opacity: 0.4;}
+    from {opacity: 0.4}
     to {opacity: 0;}
 }
 
@@ -121,9 +135,10 @@ body {
     background-size: contain;
     position: absolute;
     border: none;
-    width: 805px;
-    top: 75px;
-    left: 550px;
+    width: 785px;
+    height: 550px;
+    top: 70px;
+    left: 562px;
     opacity: 0;
     animation-name: shadowManHidden;
     animation-duration: 3s;
@@ -139,9 +154,9 @@ body {
     background-size: contain;
     background-position: center;
     border: none;
-    width: 340px;
+    width: 325px;
     height: 100px;
-    margin-left: 590px;
+    margin-left: 595px;
     margin-top: 450px;
     margin-right: 55px;
     z-index: 5;
@@ -155,7 +170,7 @@ body {
     background-size: contain;
     background-position: center;
     border: none;
-    width: 340px;
+    width: 325px;
     height: 100px;
     z-index: 6;
 }
@@ -167,7 +182,7 @@ body {
     background-size: contain;
     background-position: center;
     border: none;
-    width: 340px;
+    width: 325px;
     height: 100px;
     z-index: 5;
 }
@@ -180,23 +195,9 @@ body {
     background-size: contain;
     background-position: center;
     border: none;
-    width: 340px;
+    width: 325px;
     height: 100px;
     z-index: 6;
-}
-
-.leaderboardTitle {
-    background-image: url('../img/leaderboard-title.png');
-    background-repeat: no-repeat;
-    background-color: transparent;
-    background-size: contain;
-    background-position: center;
-    position: absolute;
-    border: none;
-    width: 225px;
-    top: 80px;
-    left: 550px;
-    z-index: 5;
 }
 
 .menubtn {
@@ -208,9 +209,9 @@ body {
     background-position: center;
     position: absolute;
     border: none;
-    width: 340px;
+    width: 325px;
     height: 100px;
-    top: 575px;
+    top: 525px;
     left: 785px;
     z-index: 5;
 }
@@ -223,7 +224,7 @@ body {
     background-size: contain;
     background-position: center;
     border: none;
-    width: 340px;
+    width: 325px;
     height: 100px;
     z-index: 6;
 }
