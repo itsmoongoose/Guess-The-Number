@@ -1,14 +1,8 @@
-//Test leaderboards
-let leaderboard1 = {
-    lewis: 1,
-}
-let leaderboard2 = {
-    lewislemay: 5,
-}
-
 //Defining Variables
-//let leaderboard1 = { }; //leaderboard array for scores that only took 1 guess
-//let leaderboard2 = { }; //leaderboard array for scores with 2+ guesses
+let leaderboard = {
+    Julie: 5,
+    David: 6,
+}
 const menubtn = document.getElementById("menubtn");
 const playbtn = document.getElementById("playbtn");
 const leaderboardbtn = document.getElementById("leaderboardbtn");
@@ -18,6 +12,7 @@ const containerOutput = document.getElementById("output");
 const leaderboardTitle = document.getElementById("leaderboard-title");
 const guessthenumberTitle = document.getElementById("guess-the-number-title");
 let leaderboardName = "";
+let gameTracker = 0;
 
 //Function -- hide and reveal elements
 function hideElements() {
@@ -36,7 +31,7 @@ function menuMessage() {
 
 //Function -- invalid name
 async function invalidName() {
-    while (!leaderboardName || leaderboardName in leaderboard1 || leaderboardName in leaderboard2) {
+    while (!leaderboardName || leaderboardName in leaderboard) {
         
         //empty name
         if (!leaderboardName) {
@@ -45,7 +40,7 @@ async function invalidName() {
             leaderboardName = leaderboardName.trim();
 
         //name already exists in leaderboard
-        } else if (leaderboardName in leaderboard1 || leaderboardName in leaderboard2) {
+        } else if (leaderboardName in leaderboard) {
             output("This name is already on the leaderboard. Please choose another: ");
             leaderboardName = await input("");
             leaderboardName = leaderboardName.trim();
@@ -105,31 +100,26 @@ async function main() {
         //Correct Guess
         if (userGuess == correctNum) {
             guessTracker = guessTracker + 1;
-            let leaderboardName = "";
-
-            //1 guess
             if (guessTracker == 1) {
                 output("INCREDIBLE! You guessed the number in a single try! \nPlease enter your name to be displayed on the leaderboard: ");
-                leaderboardName = await input("");
-                leaderboardName = leaderboardName.trim();
-                invalidName();
-                leaderboard1[leaderboardName] = guessTracker; //adding name and score to leaderboard1
             } else {
-
-                //Multiple guesses
                 output("Congratulations! You guessed the number in " + guessTracker + " tries! \nPlease enter your name to be displayed on the leaderboard: ");
-                leaderboardName = await input("");
-                leaderboardName = leaderboardName.trim();
-                invalidName();
-                leaderboard2[leaderboardName] = guessTracker; //adding name and score to leaderboard2
             }
 
-            //adding name to leaderboard
-            if (guessTracker == 1) {
-                leaderboard1[leaderboardName] = guessTracker;
-            } else {
-                leaderboard2[leaderboardName] = guessTracker;
-            }
+            //Getting leaderboard name
+            let leaderboardName = await input("");
+            leaderboardName = leaderboardName.trim();
+            invalidName();
+            gameTracker = gameTracker + 1;
+            if (gameTracker == 1) {
+                leaderboard["Nathan"] = 7;
+            } else if (gameTracker == 2) {
+                leaderboard["Katherine"] = 4;
+            } //else if (gameTracker == 3) {
+
+            //} else if (gameTracker == 4) {
+
+            //}
 
             //return to menu message
             menuMessage();
@@ -145,16 +135,9 @@ async function main() {
         output(" \n \n \n"); // adds 3 lines of space underneath leaderboardTitle (image) to separate output/container
 
         //Displaying scores
-        for (let [username, score] of Object.entries(leaderboard1)) {
+        for (let [username, score] of Object.entries(leaderboard)) {
             output(`${username}  ${score}`);
         }
-        for (let [username, score] of Object.entries(leaderboard2)) {
-            output(`${username}  ${score}`);
-        }
-
-        //No scores yet
-        
-        
     });
 
     //Menu -- return to menu
