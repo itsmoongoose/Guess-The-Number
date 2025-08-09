@@ -11,6 +11,7 @@ const container = document.getElementById("container");
 const containerOutput = document.getElementById("output");
 const leaderboardTitle = document.getElementById("leaderboard-title");
 const guessthenumberTitle = document.getElementById("guess-the-number-title");
+const shadowManRest = document.getElementById("shadow-man-rest");
 let leaderboardName = "";
 let gameTracker = 0;
 
@@ -64,6 +65,7 @@ async function main() {
     containerOutput.style.display = 'none';
     leaderboardTitle.style.display = 'none';
     guessthenumberTitle.style.display = 'none';
+    shadowManRest.style.display = 'none';
 
     //Menu -- play button
     playbtn.addEventListener('click', async function() {
@@ -148,7 +150,7 @@ async function main() {
 
         //1 game played
         if (gameTracker == 1) {
-            //img
+            shadowManRest.style.display = 'inline-block';
             displayLeaderboard();
         }
 
