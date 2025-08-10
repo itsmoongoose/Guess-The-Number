@@ -93,24 +93,20 @@ async function main() {
             while (userGuess != correctNum) {
 
                 //Invalid Guess -- throws error
-                while (isNaN(userGuess) || !userGuess || userGuess < 1 || userGuess > 100) {
+                if (isNaN(userGuess) || !userGuess || userGuess < 1 || userGuess > 100) {
                     output("ERROR - Guess must be a whole number from 1 to 100: ");
-                    userGuess = await cancellableInput("");
-                }
 
                 //Guess is too high
-                if (userGuess > correctNum) {
+                } else if (userGuess > correctNum) {
                     guessTracker = guessTracker + 1;
                     output("Too High! Guess Again: ");
-                    userGuess = await cancellableInput("");
-                }
 
                 //Guess is too low
-                if (userGuess < correctNum) {
+                } else if (userGuess < correctNum) {
                     guessTracker = guessTracker + 1;
                     output("Too Low! Guess Again: ");
-                    userGuess = await cancellableInput("");
                 }
+                userGuess = await cancellableInput(""); //getting user input again
             }
 
             //Correct Guess
