@@ -48,7 +48,6 @@ async function main() {
 
         //Menu -- play button
         playbtn.addEventListener('click', async function() {
-            gameCancelled = false;
 
             //Hiding and revealing elements
             hideElements();
@@ -60,7 +59,7 @@ async function main() {
             output(correctNum);
             let guessTracker = 0;
             output("Guess a number from 1 to 100: ");
-            let userGuess = await cancellableInput("");
+            let userGuess = await input("");
 
             //Incorrect Guess
             while (userGuess != correctNum) {
@@ -79,7 +78,7 @@ async function main() {
                     guessTracker = guessTracker + 1;
                     output("Too Low! Guess Again: ");
                 }
-                userGuess = await cancellableInput(""); //getting user input again
+                userGuess = await input(""); //getting user input again
             }
 
             //Correct Guess
@@ -92,7 +91,7 @@ async function main() {
                 }
 
                 //Getting leaderboard name
-                let leaderboardName = await cancellableInput("");
+                let leaderboardName = await input("");
                 leaderboardName = leaderboardName.trim();
 
                 //ERROR -- Name is blank or already exists
@@ -101,13 +100,13 @@ async function main() {
                     //empty name
                     if (!leaderboardName) {
                         output("You must enter at least 1 non-whitespace character to continue: ");
-                        leaderboardName = await cancellableInput("");
+                        leaderboardName = await input("");
                         leaderboardName = leaderboardName.trim();
                     
                     //name already exists in leaderboard
                     } else if (leaderboardName in leaderboard) {
                         output("This name is already on the leaderboard. Please choose another: ");
-                        leaderboardName = await cancellableInput("");
+                        leaderboardName = await input("");
                         leaderboardName = leaderboardName.trim();
                     }
                 }
@@ -155,7 +154,6 @@ async function main() {
 
         //Menu -- return to menu
         menubtn.addEventListener('click', function() {
-            gameCancelled = true;
 
             //Display Menu -- hiding and revealing elements
             menubtn.style.display = 'none';
@@ -174,9 +172,7 @@ async function main() {
 
     //try statement ends, catch begins
     } catch (error) {
-        if (error !== "Game Cancelled" && error !== "") {
-            output(error);
-        }
+        output(error);
     }
 
 //main function ends
