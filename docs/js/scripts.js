@@ -34,33 +34,6 @@ function displayLeaderboard() {
         }
 }
 
-//Function -- cancels await input when menubtn is clicked
-function cancellableInput(promptText) {
-    return new Promise((resolve, reject) => {
-        if (gameCancelled) {
-            reject("Game Cancelled.");
-            return;
-        }
-
-        function handleCancel() {
-            gameCancelled = true;
-            reject("Game Cancelled.");
-        }
-
-        menubtn.addEventListener("click", handleCancel, {once: true});
-
-        input(promptText).then(value => {
-            if (gameCancelled) {
-                reject("Game Cancelled.");
-            } else {
-                resolve(value);
-            }
-        }).catch(error => {
-            reject(error);
-        })
-    })
-}
-
 //Function -- main
 async function main() {
 
