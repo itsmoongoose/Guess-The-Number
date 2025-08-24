@@ -21,7 +21,6 @@ function hideElements() {
     arcadeLogo.style.display = 'none';
     playbtn.style.display = 'none';
     leaderboardbtn.style.display = 'none';
-    menubtn.style.display = 'inline-block';
     container.style.display = 'inline-block';
     containerOutput.style.display = 'inline-block';
 }
@@ -123,6 +122,7 @@ async function main() {
 
                 output("Successfully added score to leaderboard!");
             }
+            menubtn.style.display = 'inline-block'; //displays menubtn
         });
 
         //Menu -- leaderboard button
@@ -130,6 +130,7 @@ async function main() {
 
             //Hiding and revealing elements
             hideElements();
+            menubtn.style.display = 'inline-block';
             leaderboardTitle.style.display = 'inline-block';
             output(" \n \n \n"); // adds 3 lines of space underneath leaderboardTitle (image) to separate output/container
 
