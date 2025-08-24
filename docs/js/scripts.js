@@ -15,7 +15,6 @@ const shadowManRest = document.getElementById("shadow-man-rest");
 let leaderboardName = "";
 let gameTracker = 0;
 let jumpscareSequence = 0;
-let gameCancelled = false;
 
 //Function -- hide and reveal elements
 function hideElements() {
